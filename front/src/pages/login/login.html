@@ -1,20 +1,24 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>Show Tonight</ion-title>
-    </ion-navbar>
-</ion-header>
 
 <ion-content no-bounce>
+    <ion-slides>
+        <ion-slide style="background-image: url('assets/img/habits.jpg');">
+            <p>Une soirée, un style...</p>
+        </ion-slide>
+
+        <ion-slide style="background-image: url('assets/img/Image fond.jpg')">
+            <p>Un style sans limite</p>
+        </ion-slide>
+    </ion-slides>
   <ion-card>
     <ion-list>
 
       <ion-item>
-        <ion-label fixed>Username</ion-label>
+        <ion-label fixed>Identifiant</ion-label>
         <ion-input [(ngModel)]="identifier" type="text" value=""></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label fixed>Password</ion-label>
+        <ion-label fixed>Mot de passe</ion-label>
         <ion-input [(ngModel)]="password" type="password"></ion-input>
       </ion-item>
 
@@ -24,7 +28,7 @@
 
       <ion-item>
         <button ion-button block (click)="login()">
-          <ion-icon name="star"></ion-icon> Login
+           Se connecter
         </button>
       </ion-item>
 
