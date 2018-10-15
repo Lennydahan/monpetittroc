@@ -11,15 +11,14 @@
 
 <ion-content class="show-list">
 
-    <ion-list *ngIf="viewMode==='list'">
+    <ion-list >
 
-        <ion-item-sliding *ngFor="let show of shows">
+        <ion-item-sliding *ngFor="let item of items">
             <button ion-item (click)="openShowDetail(show)">
                 <ion-thumbnail item-left>
-                    <img src="{{serverUrl}}{{show.image.url}}"/>
+                    <img src="{{item.image}}"/>
                 </ion-thumbnail>
-                <h2>{{show.name}}</h2>
-                <p>{{ show.date | date: 'd MMMM yyyy' }}</p>
+                <h2>{{item.name}}</h2>
             </button>
             <ion-item-options>
                 <button danger (click)="deleteItem(show)">Delete</button>
@@ -28,7 +27,6 @@
 
     </ion-list>
 
-    <div *ngIf="viewMode==='map'" style="width:100%;height:100%;" id="map"></div>
 
 </ion-content>
 
