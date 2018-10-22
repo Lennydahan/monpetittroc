@@ -3,23 +3,77 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Favorites</ion-title>
+        <ion-title>Mon profil</ion-title>
     </ion-navbar>
 </ion-header>
 
+
 <ion-content>
+    <ion-card>
+            <img src="https://r1.ilikewallpaper.net/iphone-se-wallpapers/download/73711/Cianorte--Brazil-iphone-se-wallpaper-ilikewallpaper_com.jpg">
     <ion-list>
-        <ion-item-sliding *ngFor="let show of favorites">
-            <button ion-item (click)="itemTapped(show)">
-                <ion-thumbnail item-left>
-                    <img src="{{serverUrl}}{{show.image.url}}"/>
-                </ion-thumbnail>
-                <h2>{{show.name}}</h2>
-                <p>{{show.date | date: 'd MMMM yyyy' }} ∙ {{show.venue}}</p>
-            </button>
-            <ion-item-options>
-                <button danger (click)="deleteItem(show)">Delete</button>
-            </ion-item-options>
-        </ion-item-sliding>
+        <ion-item>
+            <ion-label>Nom</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Prénom</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Date de naissance</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Adresse e-mail</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Numéro de téléphone</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+                <ion-label>Taille de vêtements</ion-label>
+                <ion-input type="text"></ion-input>
+                <ion-select [(ngModel)]="tailledevetements">
+                        <ion-option value="34">34</ion-option>
+                        <ion-option value="36">36</ion-option>
+                        <ion-option value="38">38</ion-option>
+                        <ion-option value="40">40</ion-option>
+                        <ion-option value="42">42</ion-option>
+                </ion-select>
+          </ion-item>
+
+          <ion-item>
+                <ion-label>Taille de chaussures</ion-label>
+                <ion-input type="text"></ion-input>
+                <ion-select [(ngModel)]="tailledechaussures">
+                        <ion-option value="35">35</ion-option>
+                        <ion-option value="36">36</ion-option>
+                        <ion-option value="37">37</ion-option>
+                        <ion-option value="38">38</ion-option>
+                        <ion-option value="39">39</ion-option>
+                        <ion-option value="40">40</ion-option>
+                        <ion-option value="41">41</ion-option>
+                        <ion-option value="42">42</ion-option>
+                </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <button ion-button block>Sauvegarder</button>
+          </ion-item>
+          
     </ion-list>
+
+    </ion-card>
 </ion-content>
+
+
+
+
+
