@@ -6,29 +6,26 @@
 
     <ion-list>
       <ion-list-header>
-        Show Tonight
+        Mon Petit Troc
       </ion-list-header>
-      <button menuClose ion-item (click)="openPage(pages.WelcomePage)">
-        <ion-icon item-left name="bookmark"></ion-icon>
-        Welcome
-      </button>
       <button menuClose ion-item (click)="openPage(pages.ShowListPage)">
-        <ion-icon item-left name="bonfire"></ion-icon>
-        Shows
+        <ion-icon item-left name="bowtie"></ion-icon>
+        Liste des Articles
       </button>
       <button menuClose ion-item (click)="openPage(pages.FavoriteListPage)">
-        <ion-icon item-left name="star"></ion-icon>
-        Favorites
+        <ion-icon item-left name="contact"></ion-icon>
+        Mon Profil
+      </button>
+      <button menuClose ion-item (click)="openPage(pages.WelcomePage)">
+        <ion-icon item-left name="add-circle"></ion-icon>
+        Ajouter un article
       </button>
     </ion-list>
 
     <ion-list>
-      <ion-list-header>
-        Help
-      </ion-list-header>
       <button menuClose ion-item (click)="openPage(pages.AboutPage)">
         <ion-icon item-left name="information-circle"></ion-icon>
-        About
+        A propos
       </button>
       <button menuClose ion-item (click)="logout()">
         <ion-icon item-left name="log-out"></ion-icon>
