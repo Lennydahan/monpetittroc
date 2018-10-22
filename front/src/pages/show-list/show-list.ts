@@ -1,8 +1,7 @@
 import {Component} from '@angular/core';
 import {Config, NavController} from 'ionic-angular';
-import {ShowService} from '../../providers/show-service-rest';
 import {ShowDetailPage} from '../show-detail/show-detail';
-import leaflet from 'leaflet';
+import {WelcomePage} from '../welcome/welcome';
 import {SERVER_URL} from '../../providers/config';
 
 
@@ -27,7 +26,9 @@ export class ShowListPage {
     openShowDetail(item: any) {
         this.navCtrl.push(ShowDetailPage, item);
     }
-
+    openAddPage() {
+        this.navCtrl.push(WelcomePage);
+    }
     onInput(event) {
          // Reset items back to all of the items
         this.items = this.itemsForSearch;
@@ -50,7 +51,7 @@ export class ShowListPage {
     findAll() {
         this.items = [
             {
-                "id":1,
+                
                 "name": "Pantalon léopard",
                 "image": "https://media.inthestyle.com/media/catalog/product/cache/1/image/621x930/9df78eab33525d08d6e5fb8d27136e95/l/m/lm180173_leopard_548.jpg",
                 "description": "Pantalon tendance presque",

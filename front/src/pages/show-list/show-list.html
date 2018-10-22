@@ -29,17 +29,13 @@
         </ion-card>
 
     </ion-list>
-
+    <ion-fab bottom right>
+        <button ion-fab (click)="openAddPage()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+        
 
 </ion-content>
 
-<ion-footer padding>
-    <ion-segment [(ngModel)]="viewMode">
-        <ion-segment-button value="list">
-            <ion-icon name="list"></ion-icon>
-        </ion-segment-button>
-        <ion-segment-button value="map" (ionSelect)="showMap()">
-            <ion-icon name="map"></ion-icon>
-        </ion-segment-button>
-    </ion-segment>
-</ion-footer>
+
