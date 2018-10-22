@@ -13,17 +13,20 @@
 
     <ion-list >
 
-        <ion-item-sliding *ngFor="let item of items">
-            <button ion-item (click)="openShowDetail(show)">
-                <ion-thumbnail item-left>
-                    <img src="{{item.image}}"/>
-                </ion-thumbnail>
-                <h2>{{item.name}}</h2>
+        <ion-card *ngFor="let iitem of items">
+            <button ion-item (click)="openShowDetail(iitem)">
+            
+                    <img src="{{iitem.image}}"/>
+                    <ion-card-content>
+                <h2>{{iitem.name}}</h2>
+                <h4>{{iitem.taille}}</h4>               
+                <h4>{{iitem.prix}}</h4>
+                    </ion-card-content>
             </button>
             <ion-item-options>
-                <button danger (click)="deleteItem(show)">Delete</button>
+                <button danger (click)="deleteItem(iitem)">Delete</button>
             </ion-item-options>
-        </ion-item-sliding>
+        </ion-card>
 
     </ion-list>
 
