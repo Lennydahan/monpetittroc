@@ -1,4 +1,39 @@
+page-show-detail {
+
+  ion-content.maria {
+
+  background-color:beige;
+
+  
+  ion-card.details {
+    background-color:beige;
+
+img {
+  background-color: aqua!important;
+  width: 50%;
+  height: auto;
+}
+
 ion-note {
   color: color($colors, primary) !important;
   font-size: 1.4rem !important;
+}
+
+ion-card-content.details {
+  margin-right:50px;
+  background-color: white;
+  position: relative;
+  left: 0px;
+  right: 50px;
+  top: 0px;
+  bottom: 0px; 
+  
+} 
+
+h1.mathis {
+  font-size: 25pt;
+
+}
+}
+}
 }

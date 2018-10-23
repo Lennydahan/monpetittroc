@@ -4,16 +4,25 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content>
-    <ion-card *ngIf="item.name">
+<ion-content class="maria">
+    <ion-card class="details" *ngIf="item.name">
         <img src="{{item.image}}"/>
-        <ion-card-content>
-            <h2 class="card-title">{{item.name}}</h2>
+        
+        <ion-fab top right>
+        <ion-card-content class="details">
+            
+            <h1 class="mathis">{{item.prix}}</h1>
+            <h1 class="card-title">{{item.name}}</h1>
+            <h2 class="details">{{item.description}}</h2>
+            <h2 class="details">{{item.marque}}</h2>
+            <h2 class="details">{{item.taille}}</h2>
+            <h2 class="details">{{item.Etat}}</h2>
+            <h2 class="details">{{item.couleur}}</h2>
+            
         </ion-card-content>
+        </ion-fab>
         <ion-list>
             <ion-item>
-                <ion-icon item-left name="clock"></ion-icon>
-                <h3>Date</h3>
                 <ion-note item-right>{{item.description}}</ion-note>
             </ion-item>
         </ion-list>
