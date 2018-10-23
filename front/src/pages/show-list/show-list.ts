@@ -54,7 +54,7 @@ export class ShowListPage {
                 
                 "name": "Pantalon léopard",
                 "image": "https://www.getrended.com/medias/images/4250370591-1571398880.jpg",
-                "description": "Pantalon tendance presque",
+                "description": "Pantalon tendance et confortable",
                 "marque":"Zara",
                 "taille":"Taille 38",
                 "Etat":"Très bon état",
