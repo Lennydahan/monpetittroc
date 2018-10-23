@@ -78,11 +78,11 @@
 </ion-list>
     <ion-slides>
             <ion-card>
-                    <img src="https://images.unsplash.com/photo-1526481882315-f92713d01182?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=55a9d78ac1298e9562f94be5df17a766&auto=format&fit=crop&w=700&q=60"/>
+                    <img src={{image}}/>
                     <div class="card-title">Prenez votre article en photo</div>
             </ion-card>
             <ion-fab center>
-                    <button ion-fab >
+                    <button (click)="takePhoto()" ion-fab >
                         <ion-icon name="camera"></ion-icon>
                     </button>
             </ion-fab>

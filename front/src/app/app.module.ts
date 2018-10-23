@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import {WelcomePage} from '../pages/welcome/welcome';
@@ -47,6 +48,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     ShowService,
     UserService,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
