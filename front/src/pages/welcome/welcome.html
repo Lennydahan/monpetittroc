@@ -54,6 +54,27 @@
             </ion-select>
         </ion-item>
 
+        <ion-item>
+                <ion-label>Prix</ion-label>
+                <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+                <ion-label>Couleur</ion-label>
+                <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+                <ion-label>État de l'article</ion-label>
+                <ion-input type="text"></ion-input>
+                <ion-select [(ngModel)]="etat">
+                        <ion-option value="neuf">Comme neuf</ion-option>
+                        <ion-option value="trèsbon">Très bon état</ion-option>
+                        <ion-option value="bon">Bon état</ion-option>
+                        <ion-option value="acceptable">Acceptable</ion-option>
+                </ion-select>
+            </ion-item>
+
 </ion-list>
     <ion-slides>
             <ion-card>
