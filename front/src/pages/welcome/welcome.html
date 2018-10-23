@@ -7,24 +7,72 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content no-bounce>
+<ion-content>
+
+        <ion-list>
+        <ion-item>
+            <ion-label>Nom</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+                <ion-label>Description</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+        
+        <ion-item>
+            <ion-label>Marque</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label>Taille de vêtements</ion-label>
+            <ion-input type="text"></ion-input>
+            <ion-select [(ngModel)]="tailledevetements">
+                    <ion-option value="N/A">N/A</ion-option>
+                    <ion-option value="34">34</ion-option>
+                    <ion-option value="36">36</ion-option>
+                    <ion-option value="38">38</ion-option>
+                    <ion-option value="40">40</ion-option>
+                    <ion-option value="42">42</ion-option>
+            </ion-select>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label>Taille de chaussures</ion-label>
+            <ion-input type="text"></ion-input>
+            <ion-select [(ngModel)]="tailledechaussures">
+                    <ion-option value="N/A">N/A</ion-option>
+                    <ion-option value="35">35</ion-option>
+                    <ion-option value="36">36</ion-option>
+                    <ion-option value="37">37</ion-option>
+                    <ion-option value="38">38</ion-option>
+                    <ion-option value="39">39</ion-option>
+                    <ion-option value="40">40</ion-option>
+                    <ion-option value="41">41</ion-option>
+                    <ion-option value="42">42</ion-option>
+            </ion-select>
+        </ion-item>
+
+</ion-list>
     <ion-slides>
-        <ion-slide style="background-image: url('assets/img/slide_1.jpg');">
-            <p>ShowTonight is the best app!</p>
-        </ion-slide>
+            <ion-card>
+                    <img src="https://images.unsplash.com/photo-1526481882315-f92713d01182?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=55a9d78ac1298e9562f94be5df17a766&auto=format&fit=crop&w=700&q=60"/>
+                    <div class="card-title">Prenez votre article en photo</div>
+            </ion-card>
+            <ion-fab center>
+                    <button ion-fab (click)="openAddPage()">
+                        <ion-icon name="camera"></ion-icon>
+                    </button>
+            </ion-fab>
 
-        <ion-slide style="background-image: url('assets/img/slide_2.jpg')">
-            <p>Discover the best shows</p>
-        </ion-slide>
-
-        <ion-slide style="background-image: url('assets/img/slide_3.jpg')">
-            <p>
-                Learn how to code with HackX! <br />
-                <button ion-button (click)="openShowList()">
-                    Start
-                </button>
-            </p>
-        </ion-slide>
     </ion-slides>
-
+<ion-list>
+        <ion-item>
+                <button ion-button block>+Ajouter un article+</button>
+        </ion-item>
+</ion-list>
+<div class="wrapper">
+        <button class="camera"></button>
+</div>
 </ion-content>
