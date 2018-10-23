@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import { Slides, NavController } from 'ionic-angular';
 import {ShowListPage} from '../show-list/show-list';
+import { ShowService } from '../../providers/show-service-rest';
 
 @Component({
     selector: 'page-welcome',
@@ -9,14 +10,22 @@ import {ShowListPage} from '../show-list/show-list';
 export class WelcomePage {
   @ViewChild(Slides) slides: Slides;
 
-    constructor(public navCtrl: NavController) {
+    name: string;
+    description: string;
+
+    constructor(public navCtrl: NavController, public service: ShowService) {
     }
 
     ngAfterViewInit() {
       this.slides.pager = true;
     }
 
-    openShowList() {
-        this.navCtrl.push(ShowListPage);
+    addItem() {
+        var newItem = {
+            "name": this.name,
+            "description": this.description,
+        };
+        this.service.addItem(newItem);
+        this.navCtrl.setRoot(ShowListPage);
     }
 }

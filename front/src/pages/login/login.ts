@@ -1,7 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import { Slides, NavController } from 'ionic-angular';
 import {UserService} from "../../providers/user-service-rest";
-import {WelcomePage} from "../welcome/welcome";
+import {ShowListPage} from "../show-list/show-list";
 
 @Component({
     selector: 'page-login',
@@ -20,23 +20,26 @@ export class LoginPage {
     ngAfterViewInit() {
         let jwt = window.localStorage.getItem('jwt');
         if (jwt) {
-            this.navCtrl.setRoot(WelcomePage);
+            this.navCtrl.setRoot(ShowListPage);
         }
     }
 
     login() {
         let navCtrl = this.navCtrl;
         let errorDescription = this.errorDescription;
-        this.userService.login(this.identifier, this.password).then(
-            function(auth) {
-                localStorage.setItem('jwt', auth.jwt);
-                navCtrl.setRoot(WelcomePage)
-            },
-            function(err) {
-                let payload = JSON.parse(err._body);
-                errorDescription.message = payload.message;
-            }
-        );
+        var logins =  {
+            'maria': 'password', 
+            'user': '123',  
+        };
+        if (logins[this.identifier] === this.password) {
+            localStorage.setItem('jwt', this.identifier);
+            navCtrl.setRoot(ShowListPage);
+        } else {
+            errorDescription.message = 'Mauvais mot de passe';
+        }
+
+
+  
     }
 
 }
