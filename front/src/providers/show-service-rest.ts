@@ -22,7 +22,7 @@ export class ShowService {
                 "marque":"Zara",
                 "taille":"Taille 38",
                 "Etat":"Très bon état",
-                "couleur":"jaune et noir",
+                "couleur":"Jaune et noir",
                 "prix":"5€",
             },
             {
@@ -32,7 +32,7 @@ export class ShowService {
                 "marque":"H&M",
                 "taille":"Taille 2",
                 "Etat":"Neuf",
-                "couleur":"argenté",
+                "couleur":"Dorée",
                 "prix":"6€",
             },
             {
@@ -42,7 +42,7 @@ export class ShowService {
                 "marque":"Maje",
                 "taille":"Taille 3",
                 "Etat":"Bon état",
-                "couleur":"noir",
+                "couleur":"Noir",
                 "prix":"10€",
             },
             {
@@ -52,7 +52,7 @@ export class ShowService {
                 "marque":"Sandro",
                 "taille":"Taille S",
                 "Etat":"Très Bon état",
-                "couleur":"rouge",
+                "couleur":"Rouge",
                 "prix":"15€",
             },
             {
@@ -62,7 +62,7 @@ export class ShowService {
                 "marque":"Channel",
                 "taille":"Taille 56",
                 "Etat":"Très Bon état",
-                "couleur":"noir",
+                "couleur":"Noir",
                 "prix":"17€",
             },
             {
