@@ -8,24 +8,20 @@
     <ion-card class="details" *ngIf="item.name">
         <img src="{{item.image}}"/>
         
-        <ion-fab top right>
+    
         <ion-card-content class="details">
             
             <h1 class="mathis">{{item.prix}}</h1>
             <h1 class="card-title">{{item.name}}</h1>
-            <h2 class="details">{{item.description}}</h2>
+            <h2 class="details"> <ion-icon name="heart"></ion-icon> {{item.description}} <ion-icon name="heart"></ion-icon></h2>
             <h2 class="details">{{item.marque}}</h2>
             <h2 class="details">{{item.taille}}</h2>
             <h2 class="details">{{item.Etat}}</h2>
             <h2 class="details">{{item.couleur}}</h2>
             
         </ion-card-content>
-        </ion-fab>
-        <ion-list>
-            <ion-item>
-                <ion-note item-right>{{item.description}}</ion-note>
-            </ion-item>
-        </ion-list>
+
+    
 
     </ion-card>
 </ion-content>

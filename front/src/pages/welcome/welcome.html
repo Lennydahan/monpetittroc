@@ -12,12 +12,12 @@
         <ion-list>
         <ion-item>
             <ion-label>Nom</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
         </ion-item>
 
         <ion-item>
                 <ion-label>Description</ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input [(ngModel)]="description" type="text"></ion-input>
             </ion-item>
         
         <ion-item>
@@ -82,7 +82,7 @@
                     <div class="card-title">Prenez votre article en photo</div>
             </ion-card>
             <ion-fab center>
-                    <button ion-fab (click)="openAddPage()">
+                    <button ion-fab >
                         <ion-icon name="camera"></ion-icon>
                     </button>
             </ion-fab>
@@ -90,7 +90,7 @@
     </ion-slides>
 <ion-list>
         <ion-item>
-                <button ion-button block>+Ajouter un article+</button>
+                <button (click)="addItem()" ion-button block>+Ajouter un article+</button>
         </ion-item>
 </ion-list>
 <div class="wrapper">
