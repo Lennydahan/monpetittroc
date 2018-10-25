@@ -15,6 +15,11 @@ export class WelcomePage {
 
     name: string;
     description: string;
+    marque: string;
+    taille: string;
+    etat:string;
+    couleur:string;
+    prix:string; 
 
     constructor(public navCtrl: NavController, public service: ShowService, public camera: Camera) {
     }
@@ -26,7 +31,15 @@ export class WelcomePage {
     addItem() {
         var newItem = {
             "name": this.name,
+            "image":this.image,
             "description": this.description,
+            "marque": this.marque,
+            "taille": this.taille,
+            "Etat":this.etat,
+            "couleur": this.couleur,
+            "prix": this.prix,
+            
+
         };
         this.service.addItem(newItem);
         this.navCtrl.setRoot(ShowListPage);

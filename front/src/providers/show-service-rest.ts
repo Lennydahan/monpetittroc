@@ -115,6 +115,16 @@ export class ShowService {
                 "couleur":"blanc",
                 "prix":"4€",
             },
+            {
+                "name": "Manteau Chanel",
+                "image":"https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/43561651_563845170724480_9053366390781640704_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=56a359218ea76c99c00f9653d3d1e3d0&oe=5C80FF9F",
+                "description": "Beau manteau noir",
+                "marque":"Chanel",
+                "taille":"Taille 36",
+                "Etat":"Très bon état",
+                "couleur":"noir",
+                "prix":"15€",
+            },
         ];
         
     }

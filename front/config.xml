@@ -3,7 +3,7 @@
     <name>DreamHouse</name>
     <description>DreamHouse sample app</description>
     <author email="ccoenraets@gmail.com" href="http://coenraets.org">Christophe Coenraets</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://172.18.0.3:8100" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-intent href="http://*/*" />
@@ -84,5 +84,6 @@
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <plugin name="cordova-plugin-camera" spec="^4.0.3" />
+    <allow-navigation href="http://172.18.0.3:8100" sessionid="adc4380d" />
     <engine name="browser" spec="5.0.4" />
 </widget>
